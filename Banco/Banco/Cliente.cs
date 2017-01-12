@@ -3,11 +3,13 @@
     public class Cliente
     {
         
-        public Cliente(string v)
+        public Cliente(string nome)
         {
-            this.Nome = v;
+            this.Nome = nome;
+           
         }
 
         public string Nome { get; set; }
+        
     }
 }
