@@ -13,7 +13,7 @@ namespace Banco
             this.Saldo += valor;
         }
 
-        public void Saca(double valor)
+        public  virtual void Saca(double valor)
         {
             this.Saldo -= valor;
         }
