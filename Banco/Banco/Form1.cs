@@ -12,7 +12,7 @@ namespace Banco
 {
     public partial class Form1 : Form
     {
-        private Conta conta;
+        private Conta[] contas;
         
         public Form1()
         {
@@ -21,10 +21,11 @@ namespace Banco
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.conta = new ContaPoupanca();
-            Conta c = new Conta();
-            c.Numero = 1;
-            Cliente cliente = new Cliente("Pablo");
+        
+            this.contas[0] = new ContaCorrente();
+            //Conta c = new Conta();
+            this.contas[0].Numero = 1;
+            this.contas[0].Titular = new Banco.Cliente("Pablo");
            
             
             c.Titular = cliente;
