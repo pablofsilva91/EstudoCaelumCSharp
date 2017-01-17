@@ -39,7 +39,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.botaoBusca = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textoIndice = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // textoTitular
@@ -139,7 +144,7 @@
             this.groupBox1.Controls.Add(this.textoSaldo);
             this.groupBox1.Controls.Add(this.textoNumero);
             this.groupBox1.Controls.Add(this.textoTitular);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 116);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(260, 238);
             this.groupBox1.TabIndex = 10;
@@ -147,17 +152,60 @@
             this.groupBox1.Text = "Conta";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.botaoBusca);
+            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.textoIndice);
+            this.groupBox2.Location = new System.Drawing.Point(12, 10);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(260, 100);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Busca de Conta";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // botaoBusca
+            // 
+            this.botaoBusca.AutoSize = true;
+            this.botaoBusca.Location = new System.Drawing.Point(19, 38);
+            this.botaoBusca.Name = "botaoBusca";
+            this.botaoBusca.Size = new System.Drawing.Size(85, 13);
+            this.botaoBusca.TabIndex = 14;
+            this.botaoBusca.Text = "Escolha a Conta";
+            this.botaoBusca.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(162, 71);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.botaoBusca_Click);
+            // 
+            // textoIndice
+            // 
+            this.textoIndice.Location = new System.Drawing.Point(137, 31);
+            this.textoIndice.Name = "textoIndice";
+            this.textoIndice.Size = new System.Drawing.Size(100, 20);
+            this.textoIndice.TabIndex = 12;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(293, 357);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -175,6 +223,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label botaoBusca;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textoIndice;
     }
 }
 
