@@ -22,7 +22,7 @@ namespace Banco
         private void Form1_Load(object sender, EventArgs e)
         {
             contas = new Conta[3];
-        
+
             this.contas[0] = new ContaCorrente();
             this.contas[0].Numero = 1;
             this.contas[0].Titular = new Banco.Cliente("Pablo");
@@ -35,11 +35,16 @@ namespace Banco
             this.contas[1].Titular = new Cliente("mauricio");
             this.contas[1].Numero = 2;
 
+            foreach (Conta conta in contas)
+            {
+                comboContas.Items.Add("titular: " + conta.Titular.Nome);
+            }
         }
 
         private void botaoDeposito_Click(object sender, EventArgs e)
         {
-            int indice = Convert.ToInt32(textoIndice.Text);
+            //int indice = Convert.ToInt32(comboContas);
+            int indice = comboContas.SelectedIndex;
 
             Conta selecionada = this.contas[indice];
 
@@ -50,7 +55,8 @@ namespace Banco
 
         private void botaoSaque_Click(object sender, EventArgs e)
         {
-            int indice = Convert.ToInt32(textoIndice.Text);
+            //int indice = Convert.ToInt32(comboContas);
+            int indice = comboContas.SelectedIndex;
 
             Conta selecionada = this.contas[indice];
 
@@ -59,9 +65,9 @@ namespace Banco
             textoSaldo.Text = Convert.ToString(selecionada.Saldo);
         }
 
-        private void botaoBusca_Click(object sender, EventArgs e)
+        private void comboContas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int indice = Convert.ToInt32(textoIndice.Text);
+            int indice = comboContas.SelectedIndex;
             Conta selecionada = this.contas[indice];
             textoNumero.Text = Convert.ToString(selecionada.Numero);
             textoTitular.Text = selecionada.Titular.Nome;
@@ -88,7 +94,7 @@ namespace Banco
 
         }
 
-       
+        
     }
 
     

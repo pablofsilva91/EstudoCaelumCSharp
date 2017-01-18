@@ -41,8 +41,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.botaoBusca = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textoIndice = new System.Windows.Forms.TextBox();
+            this.comboContas = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -154,9 +153,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.comboContas);
             this.groupBox2.Controls.Add(this.botaoBusca);
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.textoIndice);
             this.groupBox2.Location = new System.Drawing.Point(12, 10);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(260, 100);
@@ -175,22 +173,14 @@
             this.botaoBusca.Text = "Escolha a Conta";
             this.botaoBusca.Click += new System.EventHandler(this.label5_Click);
             // 
-            // button1
+            // comboContas
             // 
-            this.button1.Location = new System.Drawing.Point(162, 71);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.botaoBusca_Click);
-            // 
-            // textoIndice
-            // 
-            this.textoIndice.Location = new System.Drawing.Point(137, 31);
-            this.textoIndice.Name = "textoIndice";
-            this.textoIndice.Size = new System.Drawing.Size(100, 20);
-            this.textoIndice.TabIndex = 12;
+            this.comboContas.FormattingEnabled = true;
+            this.comboContas.Location = new System.Drawing.Point(120, 30);
+            this.comboContas.Name = "comboContas";
+            this.comboContas.Size = new System.Drawing.Size(121, 21);
+            this.comboContas.TabIndex = 15;
+            this.comboContas.SelectedIndexChanged += new System.EventHandler(this.comboContas_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -225,8 +215,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label botaoBusca;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textoIndice;
+        private System.Windows.Forms.ComboBox comboContas;
     }
 }
 
