@@ -38,7 +38,10 @@ namespace Banco
             foreach (Conta conta in contas)
             {
                 comboContas.Items.Add("titular: " + conta.Titular.Nome);
+                comboDestinoTransferencia.Items.Add("titular: " + conta.Titular.Nome);
             }
+
+            
         }
 
         private void botaoDeposito_Click(object sender, EventArgs e)
@@ -94,7 +97,33 @@ namespace Banco
 
         }
 
-        
+        private void comboDestinoTransferencia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int indiceTransferencia = comboDestinoTransferencia.SelectedIndex;
+            Conta selecionada = this.contas[indiceTransferencia];
+            textoNumero.Text = Convert.ToString(selecionada.Numero);
+            textoTitular.Text = selecionada.Titular.Nome;
+            textoSaldo.Text = Convert.ToString(selecionada.Saldo);
+        }
+
+        private void transferir_Click(object sender, EventArgs e)
+        {
+            int indice = comboContas.SelectedIndex;
+            int indiceTransferir = comboDestinoTransferencia.SelectedIndex;
+
+            Conta selecionadaOrigem = this.contas[indice];
+            Conta selecionadaDestino = this.contas[indiceTransferir];
+
+            //saca da conta origem
+            double valor = Convert.ToDouble(textoValor.Text);
+            selecionadaOrigem.Saca(valor);
+            textoSaldo.Text = Convert.ToString(selecionadaOrigem.Saldo);
+
+            //deposita na conta destino
+            double valorTransferencia = Convert.ToDouble(textoValor.Text);
+            selecionadaDestino.Deposita(valorTransferencia);
+            textoSaldo.Text = Convert.ToString(selecionadaDestino.Saldo);
+        }
     }
 
     
