@@ -12,13 +12,20 @@ namespace Banco
 {
     public partial class FormCadastroConta : Form
     {
-        public FormCadastroConta()
+        private Form1 formPrincipal;
+        public FormCadastroConta(Form1 formPrincipal)
         {
+            this.formPrincipal = formPrincipal;
             InitializeComponent();
         }
 
         private void botaoCadastro_Click(object sender, EventArgs e)
         {
+            Conta novaConta = new ContaCorrente();
+            novaConta.Titular = new Cliente(textoTitular.Text);
+            novaConta.Numero = Convert.ToInt32(textoNumero.Text);
+
+            this.formPrincipal.AdicionaConta(novaConta);
 
         }
     }

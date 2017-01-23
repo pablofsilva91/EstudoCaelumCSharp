@@ -39,12 +39,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.transferir = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.comboDestinoTransferencia = new System.Windows.Forms.ComboBox();
             this.comboContas = new System.Windows.Forms.ComboBox();
             this.botaoBusca = new System.Windows.Forms.Label();
-            this.transferir = new System.Windows.Forms.Button();
+            this.botaoNovaConta = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -155,6 +156,16 @@
             this.groupBox1.Text = "Conta";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // transferir
+            // 
+            this.transferir.Location = new System.Drawing.Point(6, 198);
+            this.transferir.Name = "transferir";
+            this.transferir.Size = new System.Drawing.Size(75, 23);
+            this.transferir.TabIndex = 10;
+            this.transferir.Text = "Transferir";
+            this.transferir.UseVisualStyleBackColor = true;
+            this.transferir.Click += new System.EventHandler(this.transferir_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label5);
@@ -207,21 +218,22 @@
             this.botaoBusca.Text = "Escolha a Conta";
             this.botaoBusca.Click += new System.EventHandler(this.label5_Click);
             // 
-            // transferir
+            // botaoNovaConta
             // 
-            this.transferir.Location = new System.Drawing.Point(6, 198);
-            this.transferir.Name = "transferir";
-            this.transferir.Size = new System.Drawing.Size(75, 23);
-            this.transferir.TabIndex = 10;
-            this.transferir.Text = "Transferir";
-            this.transferir.UseVisualStyleBackColor = true;
-            this.transferir.Click += new System.EventHandler(this.transferir_Click);
+            this.botaoNovaConta.Location = new System.Drawing.Point(178, 361);
+            this.botaoNovaConta.Name = "botaoNovaConta";
+            this.botaoNovaConta.Size = new System.Drawing.Size(75, 23);
+            this.botaoNovaConta.TabIndex = 12;
+            this.botaoNovaConta.Text = "Nova Conta";
+            this.botaoNovaConta.UseVisualStyleBackColor = true;
+            this.botaoNovaConta.Click += new System.EventHandler(this.botaoNovaConta_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(293, 357);
+            this.ClientSize = new System.Drawing.Size(293, 384);
+            this.Controls.Add(this.botaoNovaConta);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
@@ -254,6 +266,7 @@
         private System.Windows.Forms.ComboBox comboDestinoTransferencia;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button transferir;
+        private System.Windows.Forms.Button botaoNovaConta;
     }
 }
 
