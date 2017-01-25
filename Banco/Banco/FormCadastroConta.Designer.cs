@@ -33,6 +33,7 @@
             this.botaoCadastro = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.comboTipoConta = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // textoTitular
@@ -77,11 +78,21 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Número";
             // 
+            // comboTipoConta
+            // 
+            this.comboTipoConta.FormattingEnabled = true;
+            this.comboTipoConta.Location = new System.Drawing.Point(140, 127);
+            this.comboTipoConta.Name = "comboTipoConta";
+            this.comboTipoConta.Size = new System.Drawing.Size(121, 21);
+            this.comboTipoConta.TabIndex = 5;
+            this.comboTipoConta.SelectedIndexChanged += new System.EventHandler(this.comboTipoConta_SelectedIndexChanged);
+            // 
             // FormCadastroConta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.comboTipoConta);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.botaoCadastro);
@@ -101,5 +112,6 @@
         private System.Windows.Forms.Button botaoCadastro;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboTipoConta;
     }
 }

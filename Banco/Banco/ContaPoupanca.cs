@@ -8,9 +8,15 @@ namespace Banco
 {
     class ContaPoupanca : Conta
     {
-        public override void Saca(double valor)
+        
+           public override void Saca(double valor)
         {
-            base.Saca(valor + 0.10);
+            this.Saldo -= (valor + 0.10);
+        }
+
+        public override void Deposita(double valor)
+        {
+            this.Saldo += valor;
         }
     }
 }

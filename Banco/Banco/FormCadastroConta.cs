@@ -21,6 +21,7 @@ namespace Banco
 
         private void botaoCadastro_Click(object sender, EventArgs e)
         {
+            
             Conta novaConta = new ContaCorrente();
             novaConta.Titular = new Cliente(textoTitular.Text);
             novaConta.Numero = Convert.ToInt32(textoNumero.Text);
@@ -28,5 +29,13 @@ namespace Banco
             this.formPrincipal.AdicionaConta(novaConta);
 
         }
+
+        private void comboTipoConta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboTipoConta.Items.Add("ContaCorrente");
+            comboTipoConta.Items.Add("ContaPoupanca");  
+        }
+
+        
     }
 }
