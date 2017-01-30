@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Banco
 {
-    class ContaCorrente : Conta
+    class ContaCorrente : Conta, ITributavel
     {
         
         public override void Saca(double valor)
@@ -17,6 +17,11 @@ namespace Banco
         public override void Deposita(double valor)
         {
             this.Saldo += (valor - 0.05);
+        }
+
+        public double CalculaTributos()
+        {
+            return this.Saldo *0.05;
         }
     }
 }
