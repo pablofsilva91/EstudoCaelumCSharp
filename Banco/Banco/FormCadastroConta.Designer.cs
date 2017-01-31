@@ -81,6 +81,9 @@
             // comboTipoConta
             // 
             this.comboTipoConta.FormattingEnabled = true;
+            this.comboTipoConta.Items.AddRange(new object[] {
+            "ContaCorrente",
+            "ContaPoupanca"});
             this.comboTipoConta.Location = new System.Drawing.Point(140, 127);
             this.comboTipoConta.Name = "comboTipoConta";
             this.comboTipoConta.Size = new System.Drawing.Size(121, 21);
