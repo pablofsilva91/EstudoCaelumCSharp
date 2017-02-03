@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboTipoConta = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textoTitular
@@ -90,11 +91,21 @@
             this.comboTipoConta.TabIndex = 5;
             this.comboTipoConta.SelectedIndexChanged += new System.EventHandler(this.comboTipoConta_SelectedIndexChanged);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(40, 134);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(28, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Tipo";
+            // 
             // FormCadastroConta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.comboTipoConta);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -117,5 +128,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboTipoConta;
+        private System.Windows.Forms.Label label3;
     }
 }
