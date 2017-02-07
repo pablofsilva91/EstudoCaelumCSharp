@@ -11,7 +11,15 @@ namespace Banco
         
            public override void Saca(double valor)
         {
-            this.Saldo -= (valor + 0.10);
+            if (valor + 0.10 > this.Saldo)
+            {
+                throw new Exception("Valor do saque maior que o saldo");
+            }
+            else
+            {
+                this.Saldo -= (valor + 0.10);
+            }
+            
         }
 
         public override void Deposita(double valor)
