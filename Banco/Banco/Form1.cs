@@ -77,11 +77,14 @@ namespace Banco
                 textoSaldo.Text = Convert.ToString(selecionada.Saldo);
                 MessageBox.Show("Dinheiro liberado");
             }
-            catch(Exception ex)
+            catch(SaldoInsuficienteException ex)
             {
                 MessageBox.Show("Saldo insuficiente");
             }
-            
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show("Não é possível sacar um valor negativo");
+            }
         }
 
         private void comboContas_SelectedIndexChanged(object sender, EventArgs e)
