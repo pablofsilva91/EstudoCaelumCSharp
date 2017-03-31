@@ -27,18 +27,22 @@ namespace Banco
             Conta c1 = new ContaCorrente();
             c1.Numero = 1;
             c1.Titular = new Banco.Cliente("Pablo");
+            c1.Tipo = "ContaCorrente";
+
+            
             this.AdicionaConta(c1);
 
-            Conta c2 = new ContaCorrente();
+            Conta c2 = new ContaPoupanca();
             c2.Numero = 2;
             c2.Titular = new Banco.Cliente("Lucas");
             this.AdicionaConta(c2);
+            c2.Tipo = "ContaPoupanca";
 
-            foreach (Conta conta in contas)
-            {
-                comboContas.Items.Add("titular: " + conta.Titular.Nome);
-                comboDestinoTransferencia.Items.Add("titular: " + conta.Titular.Nome);
-            }
+            //foreach (Conta conta in contas)
+            //{
+            //   comboContas.Items.Add("titular: " + conta.Titular.Nome);
+            //   comboDestinoTransferencia.Items.Add("titular: " + conta.Titular.Nome);
+            //}
 
             
         }
@@ -94,6 +98,9 @@ namespace Banco
             textoNumero.Text = Convert.ToString(selecionada.Numero);
             textoTitular.Text = selecionada.Titular.Nome;
             textoSaldo.Text = Convert.ToString(selecionada.Saldo);
+            textTipo.Text = selecionada.Tipo;
+            
+            
         }
 
         private void textoSaldo_TextChanged(object sender, EventArgs e)
@@ -123,6 +130,7 @@ namespace Banco
             textoNumero.Text = Convert.ToString(selecionada.Numero);
             textoTitular.Text = selecionada.Titular.Nome;
             textoSaldo.Text = Convert.ToString(selecionada.Saldo);
+
         }
 
         private void transferir_Click(object sender, EventArgs e)
@@ -166,6 +174,21 @@ namespace Banco
             MessageBox.Show("Total: " + totalizador.Total);
 
            
+        }
+
+        private void textoTitular_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textTipo_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

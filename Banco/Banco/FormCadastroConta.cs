@@ -21,19 +21,34 @@ namespace Banco
 
         private void botaoCadastro_Click(object sender, EventArgs e)
         {
-            
-            Conta novaConta = new ContaCorrente();
-            novaConta.Titular = new Cliente(textoTitular.Text);
-            //novaConta.Numero = Convert.ToInt32(textoNumero.Text);
+            // Exercício 7 opcional, capítulo 12
+            if (comboTipoConta.SelectedItem.ToString() == "ContaCorrente")
+            {
 
-            this.formPrincipal.AdicionaConta(novaConta);
+                Conta novaConta = new ContaCorrente();
+                novaConta.Titular = new Cliente(textoTitular.Text);
+                //novaConta.Numero = Convert.ToInt32(textoNumero.Text);
+                novaConta.Tipo = "ContaCorrente";
+                this.formPrincipal.AdicionaConta(novaConta);
+
+            }
+            else
+            {
+                Conta novaConta = new ContaPoupanca();
+                novaConta.Titular = new Cliente(textoTitular.Text);
+                //novaConta.Numero = Convert.ToInt32(textoNumero.Text);
+                novaConta.Tipo = "ContaPopanca";
+                this.formPrincipal.AdicionaConta(novaConta);
+                
+            }
+
+            this.Close();
 
         }
 
         private void comboTipoConta_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboTipoConta.Items.Add("ContaCorrente");
-            comboTipoConta.Items.Add("ContaPoupanca");  
+
         }
 
         private void FormCadastroConta_Load(object sender, EventArgs e)

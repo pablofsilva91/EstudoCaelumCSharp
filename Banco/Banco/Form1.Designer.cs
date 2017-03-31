@@ -39,6 +39,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textTipo = new System.Windows.Forms.TextBox();
             this.transferir = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -53,21 +55,22 @@
             // 
             // textoTitular
             // 
-            this.textoTitular.Location = new System.Drawing.Point(137, 21);
+            this.textoTitular.Location = new System.Drawing.Point(135, 63);
             this.textoTitular.Name = "textoTitular";
             this.textoTitular.Size = new System.Drawing.Size(100, 20);
             this.textoTitular.TabIndex = 0;
+            this.textoTitular.TextChanged += new System.EventHandler(this.textoTitular_TextChanged);
             // 
             // textoNumero
             // 
-            this.textoNumero.Location = new System.Drawing.Point(137, 57);
+            this.textoNumero.Location = new System.Drawing.Point(137, 99);
             this.textoNumero.Name = "textoNumero";
             this.textoNumero.Size = new System.Drawing.Size(100, 20);
             this.textoNumero.TabIndex = 1;
             // 
             // textoSaldo
             // 
-            this.textoSaldo.Location = new System.Drawing.Point(137, 93);
+            this.textoSaldo.Location = new System.Drawing.Point(137, 128);
             this.textoSaldo.Name = "textoSaldo";
             this.textoSaldo.Size = new System.Drawing.Size(100, 20);
             this.textoSaldo.TabIndex = 2;
@@ -75,7 +78,7 @@
             // 
             // textoValor
             // 
-            this.textoValor.Location = new System.Drawing.Point(137, 130);
+            this.textoValor.Location = new System.Drawing.Point(137, 157);
             this.textoValor.Name = "textoValor";
             this.textoValor.Size = new System.Drawing.Size(100, 20);
             this.textoValor.TabIndex = 3;
@@ -103,7 +106,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 100);
+            this.label1.Location = new System.Drawing.Point(19, 135);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 6;
@@ -112,7 +115,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 64);
+            this.label2.Location = new System.Drawing.Point(19, 106);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 7;
@@ -121,7 +124,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 28);
+            this.label3.Location = new System.Drawing.Point(17, 72);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(36, 13);
             this.label3.TabIndex = 8;
@@ -130,7 +133,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 133);
+            this.label4.Location = new System.Drawing.Point(19, 160);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 9;
@@ -138,6 +141,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.textTipo);
             this.groupBox1.Controls.Add(this.transferir);
             this.groupBox1.Controls.Add(this.botaoDeposita);
             this.groupBox1.Controls.Add(this.label4);
@@ -156,6 +161,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Conta";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(19, 15);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(74, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Tipo de Conta";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // textTipo
+            // 
+            this.textTipo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textTipo.Location = new System.Drawing.Point(137, 12);
+            this.textTipo.Name = "textTipo";
+            this.textTipo.Size = new System.Drawing.Size(100, 20);
+            this.textTipo.TabIndex = 11;
+            this.textTipo.TextChanged += new System.EventHandler(this.textTipo_TextChanged);
             // 
             // transferir
             // 
@@ -280,6 +304,8 @@
         private System.Windows.Forms.Button transferir;
         private System.Windows.Forms.Button botaoNovaConta;
         private System.Windows.Forms.Button botaoImpostos;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textTipo;
     }
 }
 

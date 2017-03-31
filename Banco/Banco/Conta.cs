@@ -7,6 +7,8 @@ namespace Banco
         public int Numero { get; set; }
         public double Saldo { get; set; }
         public Cliente Titular { get; set; }
+        public string Tipo { get; set; }
+
 
         public static int ProximoNumero()
         {
