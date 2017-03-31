@@ -29,14 +29,15 @@ namespace Banco
             c1.Titular = new Banco.Cliente("Pablo");
             c1.Tipo = "ContaCorrente";
 
-            
             this.AdicionaConta(c1);
 
             Conta c2 = new ContaPoupanca();
             c2.Numero = 2;
             c2.Titular = new Banco.Cliente("Lucas");
-            this.AdicionaConta(c2);
             c2.Tipo = "ContaPoupanca";
+
+            this.AdicionaConta(c2);
+            
 
             //foreach (Conta conta in contas)
             //{
@@ -49,9 +50,10 @@ namespace Banco
 
         public void AdicionaConta(Conta conta)
         {
-            this.contas[this.numeroDeContas] = conta;
+           this.contas[this.numeroDeContas] = conta;
             this.numeroDeContas++;
             comboContas.Items.Add("titular: " + conta.Titular.Nome);
+            comboDestinoTransferencia.Items.Add("titular: " + conta.Titular.Nome);
 
         }
 
